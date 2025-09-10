@@ -25,6 +25,7 @@ import {
   FilterState,
   FormulaAnnotationLayer,
   IntervalAnnotationLayer,
+  isThemeDark,
   LegendState,
   SupersetTheme,
   TimeseriesAnnotationLayer,
@@ -321,6 +322,7 @@ export function transformSeries(
         : undefined,
     emphasis,
     showSymbol,
+    symbol: () => (theme && isThemeDark(theme) ? 'circle' : 'emptyCircle'),
     symbolSize: markerSize,
     label: {
       show: !!showValue,

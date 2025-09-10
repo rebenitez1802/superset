@@ -195,6 +195,7 @@ function Echart(
       const getEchartsTheme = (options: any) => {
         const antdTheme = theme;
         const echartsTheme = {
+          backgroundColor: antdTheme.colorBgContainer,
           textStyle: {
             color: antdTheme.colorText,
             fontFamily: antdTheme.fontFamily,
